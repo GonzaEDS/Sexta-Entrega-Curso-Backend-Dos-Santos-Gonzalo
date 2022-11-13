@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products Form, Table And Chat</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <style>
+      .formdata {
+        padding: 2rem;
+        border: 2px solid black;
+        border-radius: 1rem;
+      }
+      body {
+        max-width: 100vw;
+        background-image: url(https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png);
+        background-size: cover;
+      }
+      .container-bg {
+        min-height: 100vh;
+        background: linear-gradient(101deg, #33865578, transparent);
+      }
+
+      table {
+        background: gainsboro;
+        color: black;
+        filter: drop-shadow(1px 2px 2px #181919);
+      }
+      tbody tr:nth-child(odd) {
+        background-color: #d2c6c6;
+      }
+      thead {
+        text-transform: uppercase;
+        font-family: monospace;
+      }
+      table,
+      tr,
+      th,
+      td,
+      .messages {
+        border-collapse: collapse;
+        border: 2px solid black;
+        padding: 1em;
+        font-size: 1.3rem;
+        text-align: center;
+        vertical-align: middle;
+      }
+      td {
+        font-family: sans-serif;
+      }
+      img {
+        filter: drop-shadow(1px 1px 1px black);
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .messageLi {
+        border: 1px solid grey;
+        background: #ffffff1c;
+        padding: 0rem;
+        margin-bottom: 1rem;
+      }
+      .messageContentDiv {
+        color: white;
+        padding: 0.7rem;
+      }
+      .messageEmailDiv {
+        font-size: 1.2rem;
+        color: lightgrey;
+        background: #0000003d;
+      }
+      @media only screen and (max-width: 500px) {
+        table,
+        tr,
+        th,
+        td {
+          border-collapse: collapse;
+          padding: 0.7em;
+          font-size: 1rem;
+          text-align: center;
+        }
+      }
+      @media only screen and (max-width: 400px) {
+        table,
+        tr,
+        th,
+        td {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-bg pt-4">
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <!-- Form -->
+        <h1 class="display-4 mb-3">Enter a product</h1>
+        <div class="col-11 col-sm-4">
+          <form class="formdata bg-dark text-light" id="productsForm">
+            <div class="mb-3">
+              <label for="name-input" class="form-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="name-input"
+                aria-describedby="nameInput"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="price-input" class="form-label">Price</label>
+              <input
+                type="text"
+                name="price"
+                class="form-control"
+                id="price-input"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="thumbnail-input" class="form-label">Thumbnail</label>
+              <input
+                type="text"
+                name="thumbnail"
+                class="form-control"
+                id="thumbnail-input"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+        <!-- Table -->
+        <h1 class="display-5 mb-3 mt-5">Products Table</h1>
+        <div class="col-11 col-sm-6">
+          <% if(productsData.length < 1) {%>
+          <div class="alert alert-danger" role="alert">
+            No se encontraron registros
+          </div>
+          <% } else { %>
+
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">Id</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <% productsData.forEach(product => { %>
+              <tr>
+                <td><%= product.name %></td>
+                <td>$<%= product.price %></td>
+                <td>
+                  <img
+                    src="<%= product.thumbnail %>"
+                    alt="<%= product.name %> icon"
+                    width="100"
+                    height="100"
+                  />
+                </td>
+                <td><%= product.id %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <% } %>
+        </div>
+        <!-- chat -->
+        <div class="col-11 col-sm-6 text-center">
+          <h1 class="display-5 mb-3 mt-5">Chat</h1>
+          <form
+            class="formdata bg-dark text-light text-start"
+            id="messagesForm"
+          >
+            <div class="mb-3">
+              <label for="email-input" class="form-label">Email</label>
+              <input
+                type="text"
+                name="email"
+                class="form-control"
+                id="email-input"
+                aria-describedby="emailInput"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message-input" class="form-label">Message</label>
+              <textarea
+                name="message"
+                id="message-input"
+                class="form-control"
+                cols="30"
+                rows="5"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div class="messages bg-dark text-light mt-4 mb-5">
+            <% if(productsData.length < 1) {%>
+            <div class="alert alert-danger" role="alert">
+              No se encontraron mensajes
+            </div>
+            <% } else { %>
+            <ul id="messagesUl">
+              <% messagesData.forEach(message => { %>
+
+              <li class="messageLi">
+                <div class="messageEmailDiv"><%= message.email %></div>
+                <div class="messageContentDiv"><%= message.content %></div>
+              </li>
+
+              <% }) %>
+            </ul>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

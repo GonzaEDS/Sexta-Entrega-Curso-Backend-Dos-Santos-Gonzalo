@@ -1,0 +1,74 @@
+[
+   {
+      "name": "Regla",
+      "price": 23.34,
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/education-759/2050/Education_flat-16-1024.png",
+      "id": 1
+   },
+   {
+      "name": "Calculadora",
+      "price": 134.45,
+      "thumbnail": "https://cdn1.iconfinder.com/data/icons/icons-for-a-site-1/64/advantage_calculator-1024.png",
+      "id": 2
+   },
+   {
+      "name": "Globo terraqueo",
+      "price": 200.5,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-1024.png",
+      "id": 3
+   },
+   {
+      "name": "Microscopio",
+      "price": 2100.45,
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/education-759/2050/Education_flat-10-1024.png",
+      "id": 4
+   },
+   {
+      "name": "Telescopio",
+      "price": 3200.55,
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/education-759/2050/Education_flat-24-1024.png",
+      "id": 5
+   },
+   {
+      "name": "Tubos de ensayo",
+      "price": 900.5,
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/education-759/2050/Education_flat-05-1024.png",
+      "id": 6
+   },
+   {
+      "name": "Dragón",
+      "price": "5000",
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/medieval-23/340/medieval_dragon_fantasy_monster_mythology_flying_creature-512.png",
+      "id": 7
+   },
+   {
+      "name": "1-UP Mushroom",
+      "price": "500",
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/supermario/PNG/Mushroom---1UP.png",
+      "id": 8
+   },
+   {
+      "name": "Bullets",
+      "price": "200",
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/crime-and-security-24/64/35-512.png",
+      "id": 9
+   },
+   {
+      "price": "100",
+      "name": "1-UP Mushroom",
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/crime-and-security-24/64/35-512.png",
+      "id": 10
+   },
+   {
+      "price": "100",
+      "name": "1-UP Mushroom",
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/crime-and-security-24/64/35-512.png",
+      "id": 11
+   },
+   {
+      "price": "1500",
+      "name": "Dragon",
+      "thumbnail": "https://cdn4.iconfinder.com/data/icons/crime-and-security-24/64/35-512.png",
+      "id": 12
+   }
+]
