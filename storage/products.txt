@@ -52,23 +52,5 @@
       "price": "200",
       "thumbnail": "https://cdn4.iconfinder.com/data/icons/crime-and-security-24/64/35-512.png",
       "id": 9
-   },
-   {
-      "price": "100",
-      "name": "1-UP Mushroom",
-      "thumbnail": "https://cdn4.iconfinder.com/data/icons/crime-and-security-24/64/35-512.png",
-      "id": 10
-   },
-   {
-      "price": "100",
-      "name": "1-UP Mushroom",
-      "thumbnail": "https://cdn4.iconfinder.com/data/icons/crime-and-security-24/64/35-512.png",
-      "id": 11
-   },
-   {
-      "price": "1500",
-      "name": "Dragon",
-      "thumbnail": "https://cdn4.iconfinder.com/data/icons/crime-and-security-24/64/35-512.png",
-      "id": 12
    }
 ]

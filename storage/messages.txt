@@ -3,30 +3,5 @@
       "email": "die.zaubernacht@gmail.com",
       "content": "Hello World",
       "id": "1"
-   },
-   {
-      "email": "tester@example.com",
-      "content": "jlñkjñkj",
-      "id": 2
-   },
-   {
-      "email": "tester@example.com",
-      "content": "kjlñkj",
-      "id": 3
-   },
-   {
-      "email": "tester2@example.com",
-      "content": "lkjlkñjhhh jkljklñj",
-      "id": 4
-   },
-   {
-      "email": "juan@example.com",
-      "content": "Mensaje",
-      "id": 5
-   },
-   {
-      "email": "john@example.com",
-      "content": "Texting Messages",
-      "id": 6
    }
 ]
